@@ -5,7 +5,7 @@ try:
     cursor = conn.cursor()
 
     #     Создадим пользователя с user_id = 1000
-    cursor.execute("INSERT OR IGNORE INTO `users` (`user_id`) VALUES (?)", (1001,))
+    cursor.execute("INSERT OR IGNORE INTO `users` (`user_id`) VALUES (?)", (1002,))
 
     #     Считываем всех пользователей
     users = cursor.execute("SELECT * FROM `users` ")
@@ -20,3 +20,4 @@ except sqlite3.Error as error:
 finally:
     if(conn):
         conn.close()
+
